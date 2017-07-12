@@ -16,7 +16,7 @@ export default class TimerButton extends React.Component {
 	constructor(props) {
 	  super(props)
 		this.state = {
-			timerCount: this.props.timerCount || 5,
+			timerCount: this.props.timerCount || 60,
 			timerTitle: this.props.timerTitle || '获取验证码',
 			counting: false,
 			selfEnable: true,
@@ -36,10 +36,11 @@ export default class TimerButton extends React.Component {
 
 	_countDownAction(){
 		const codeTime = this.state.timerCount;
-		const overTimeStamp = Math.round(Date.now()/1000) + codeTime/*过期时间戳（秒）*/
+		const now = Date.now()
+		const overTimeStamp = now + codeTime * 1000 + 100/*过期时间戳（毫秒） +100 毫秒容错*/
 		this.interval = setInterval(() =>{
 			/* 切换到后台不受影响*/
-			const nowStamp = Math.round(Date.now()/1000)
+			const nowStamp = Date.now()
 			if (nowStamp >= overTimeStamp) {
 				/* 倒计时结束*/
 				this.interval&&clearInterval(this.interval);
@@ -53,9 +54,10 @@ export default class TimerButton extends React.Component {
 					this.props.timerEnd()
 				};
 			}else{
+				const leftTime = parseInt((overTimeStamp - nowStamp)/1000, 10)
 				this.setState({
-					timerCount: overTimeStamp - nowStamp,
-					timerTitle: `重新获取(${overTimeStamp - nowStamp}s)`,
+					timerCount: leftTime,
+					timerTitle: `重新获取(${leftTime}s)`,
 				})
 			}
 			/* 切换到后台 timer 停止计时 */
@@ -76,9 +78,7 @@ export default class TimerButton extends React.Component {
 				})
 			}
 			*/
-		},300)
-		/*由于时间戳本是精确到毫秒的，而计算的时候进行了四舍五入取整
-		所以这个timer的执行周期需要尽可能的短以规避因四舍五入导致的错误*/
+		},1000)
 	}
 	_shouldStartCountting(shouldStart){
 		if (this.state.counting) {return}

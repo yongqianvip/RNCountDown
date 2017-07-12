@@ -1,6 +1,6 @@
 /*
 * @author:  yinyongqian
-* @createTime:  2017-06-27, 21:36:35 GMT+0800
+* @createTime:  2017-04-06, 21:36:35 GMT+0800
 * @description:  root app
 */
 
@@ -29,12 +29,11 @@ export default class RNCountDown extends Component {
     })
     setTimeout(()=>{
       const requestSucc = Math.random() + 0.5 > 1
-      console.log("点击获取验证码按钮，模拟结果 =》", requestSucc ? '成功':'失败');
       this.setState({
-        state: `验证码获取${requestSucc ? '成功' : '失败'}`
+        state: `（随机）模拟验证码获取${requestSucc ? '成功' : '失败'}`
       })
       shouldStartCounting && shouldStartCounting(requestSucc)
-      console.log(`验证码发送${requestSucc ? '成功' : '失败'}`)
+      console.log(`（随机）模拟验证码发送${requestSucc ? '成功' : '失败'}`)
     }, 2000);
 
 	}
