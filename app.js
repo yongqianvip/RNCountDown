@@ -33,7 +33,6 @@ export default class RNCountDown extends Component {
         state: `（随机）模拟验证码获取${requestSucc ? '成功' : '失败'}`
       })
       shouldStartCounting && shouldStartCounting(requestSucc)
-      console.log(`（随机）模拟验证码发送${requestSucc ? '成功' : '失败'}`)
     }, 2000);
 
 	}
