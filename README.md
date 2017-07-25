@@ -10,6 +10,10 @@
 
 示例：
 
+	import CountDownButton from 'react-native-smscode-count-down'
+	
+	...
+	
 	<CountDownButton
 		style={{width: 110,marginRight: 10}}
 		textStyle={{color: 'blue'}}
