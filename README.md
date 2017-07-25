@@ -4,15 +4,23 @@
 
 
 ![](http://7xp7q7.com1.z0.glb.clouddn.com/image/jianshu/RNcountdown.gif)
+![](http://7xp7q7.com1.z0.glb.clouddn.com/image/jianshu/RN/countdown.gif)
 ## 使用
 
-	<TimerButton enable={phoneNumber.length}
+	<CountDownButton
 		style={{width: 110,marginRight: 10}}
-		textStyle={{color: StaticColor.COLOR_MAIN}}
-		timerCount={10}
-		onClick={(shouldStartCountting)=>{
-			this._requestSMSCode(shouldStartCountting)
-		}}/>
+		textStyle={{color: 'blue'}}
+		timerCount={60}
+		timerTitle={'获取验证码'}
+    	enable={phoneNum.length > 10}
+    	onClick={(shouldStartCounting)=>{
+    		this._requestAPI(shouldStartCounting)
+        }}
+	    timerEnd={()=>{
+	      this.setState({
+	        state: '倒计时结束'
+	      })
+	    }}/>
 		
 唯一需要解释的是`shouldStartCountting`  
 
