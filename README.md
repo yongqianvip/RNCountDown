@@ -4,6 +4,11 @@
 
 ![](http://7xp7q7.com1.z0.glb.clouddn.com/image/jianshu/RN/countdown.gif)
 ## 使用
+安装：
+
+	npm install react-native-smscode-count-down
+
+示例：
 
 	<CountDownButton
 		style={{width: 110,marginRight: 10}}

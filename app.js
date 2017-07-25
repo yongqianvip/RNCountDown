@@ -23,6 +23,7 @@ export default class RNCountDown extends Component {
 		}
 		this._requestAPI = this._requestAPI.bind(this)
 	}
+  //2 秒后随机模拟获取验证码成功或失败的情况
 	_requestAPI(shouldStartCounting){
     this.setState({
       state: '正在请求验证码'
