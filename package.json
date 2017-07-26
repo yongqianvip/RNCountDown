@@ -15,6 +15,10 @@
     "jest": "20.0.4",
     "react-test-renderer": "16.0.0-alpha.6"
   },
+  "files": [
+    "CountDownButton.js",
+    "index.js"
+  ],
   "jest": {
     "preset": "react-native"
   },
