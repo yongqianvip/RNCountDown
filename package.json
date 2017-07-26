@@ -17,7 +17,8 @@
   },
   "files": [
     "CountDownButton.js",
-    "index.js"
+    "index.js",
+    "README.md"
   ],
   "jest": {
     "preset": "react-native"
