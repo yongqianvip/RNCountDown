@@ -6,7 +6,7 @@
 ## 使用
 安装：
 
-	npm install react-native-smscode-count-down
+	npm install react-native-smscode-count-down --save
 
 示例：
 
