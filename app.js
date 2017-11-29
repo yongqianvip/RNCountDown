@@ -12,7 +12,7 @@ import {
   View,
   TextInput
 } from 'react-native';
-import CountDownButton from 'react-native-smscode-count-down'
+import CountDownButton from './CountDownButton.js'
 
 export default class RNCountDown extends Component {
 	constructor(props){
