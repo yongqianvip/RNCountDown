@@ -12,7 +12,7 @@ import {
 	TouchableOpacity,
 	ViewPropTypes
 } from 'react-native';
-export default class TimerButton extends React.Component {
+export class CountDownButton extends React.Component {
 	constructor(props) {
 	  super(props)
 		this.state = {
