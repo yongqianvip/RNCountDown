@@ -12,19 +12,19 @@ import {
   View,
   TextInput
 } from 'react-native';
-import {CountDownButton} from './CountDownButton.js'
+import CountDownButton from './CountDownButton.js'
 
 export default class RNCountDown extends Component {
-	constructor(props){
-		super(props)
-		this.state = {
-			phoneNum: '',
+  constructor(props){
+    super(props)
+    this.state = {
+      phoneNum: '',
       state: '这里显示状态'
-		}
-		this._requestAPI = this._requestAPI.bind(this)
-	}
+    }
+    this._requestAPI = this._requestAPI.bind(this)
+  }
   //2 秒后随机模拟获取验证码成功或失败的情况
-	_requestAPI(shouldStartCounting){
+  _requestAPI(shouldStartCounting){
     this.setState({
       state: '正在请求验证码'
     })
@@ -36,24 +36,24 @@ export default class RNCountDown extends Component {
       shouldStartCounting && shouldStartCounting(requestSucc)
     }, 2000);
 
-	}
+  }
   render() {
-  	const {phoneNum} = this.state
+    const {phoneNum} = this.state
     return (
       <View style={styles.container}>
         <View style={styles.textInputView}>
           <TextInput style={styles.textInput} placeholder={'手机号码'} value={phoneNum} onChangeText={(value)=>{
-	        	this.setState({
-	        		phoneNum: value
-	        	})
-	        }}/>
-	      </View>
+            this.setState({
+              phoneNum: value
+            })
+          }}/>
+        </View>
         <CountDownButton
-        	timerTitle={'获取验证码'}
-        	enable={phoneNum.length > 10}
-        	onClick={(shouldStartCounting)=>{
-        		this._requestAPI(shouldStartCounting)
-	        }}
+          timerTitle={'获取验证码'}
+          enable={phoneNum.length > 10}
+          onClick={(shouldStartCounting)=>{
+            this._requestAPI(shouldStartCounting)
+          }}
           timerEnd={()=>{
             this.setState({
               state: '倒计时结束'
