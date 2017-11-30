@@ -14,7 +14,7 @@ import {
 	TouchableOpacity,
 	ViewPropTypes
 } from 'react-native';
-export class CountDownButton extends React.Component {
+export default class CountDownButton extends React.Component {
 	constructor(props) {
 	  super(props)
 		this.state = {
