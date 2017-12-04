@@ -61,10 +61,10 @@ export default class CountDownButton extends React.Component {
 				const leftTime = parseInt((overTimeStamp - nowStamp)/1000, 10)
 				let activeTitle = `重新获取(${leftTime}s)`
 				if (timerActiveTitle) {
-					if (timerActiveTitle.length > 0) {
-						activeTitle = timerActiveTitle[0] + leftTime
-					}else if (timerActiveTitle.length > 1) {
+					if (timerActiveTitle.length > 1) {
 						activeTitle = timerActiveTitle[0] + leftTime + timerActiveTitle[1]
+					}else if (timerActiveTitle.length > 0) {
+						activeTitle = timerActiveTitle[0] + leftTime
 					}
 				}
 				this.setState({
