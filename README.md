@@ -32,11 +32,19 @@ usage：
 		}}/>
 		
 
-唯一需要解释的是`shouldStartCountting`  
+|props|type|default value|mark|
+|:---:|:---:|:---:|:---:|
+| onClick|func|-|点击后触发，同时将按钮置为不可用，配合`shouldStartCountting` 使用|
+| timerCount|number|60|倒计时时长|
+| shouldStartCountting|func|-|决定是否开始倒计时的回调函数，参数类型Bool|
+|style|View style|-|-|
+| textStyle |Text style|-|-|
+| disableColor |string|gray|按钮不可用状态下的颜色|
+| enable |bool|false|按钮是否可用（比如用户输入合法手机号时可用，否则不可用）|
+| timerEnd |func|-|倒计时结束的回调函数|
+| timerActiveTitle |array|['重新获取（', 's）']|倒计时的数字会插在数组第一项之后，如：['请在', '秒后重新获取']，显示为【请在60秒后重新获取】|
 
-- 它是一个回调函数，接受一个`Bool`类型的参数
-- `onClick`触发后按钮`selfEnable`会立即被置为`false`
-- 通过`onClick`中的一系列逻辑处理之后需要调用这个回调函数  
 
-	* `shouldStartCountting(true)`，开始倒计时，倒计时结束时自动恢复初始状态
-	* `shouldStartCountting(false)`， 按钮的`selfEnable`会立即被置为`true`
+- `shouldStartCountting`：回调函数，接受一个`Bool`类型的参数
+	* `shouldStartCountting(true)`，开始倒计时，但按钮仍不可点击，直到倒计时结束
+	* `shouldStartCountting(false)`， 按钮恢复可点击状态，但不会开始倒计时
