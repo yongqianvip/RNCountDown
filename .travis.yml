@@ -1,1 +1,2 @@
-language: java-script
+language: objective-c
+xcode_project: ./example/RNCountDown/ios/RNCountDown.xcodeproj
