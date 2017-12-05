@@ -46,5 +46,5 @@ usage：
 
 
 - `shouldStartCountting`：回调函数，接受一个`Bool`类型的参数
-	* `shouldStartCountting(true)`，开始倒计时，但按钮仍不可点击，直到倒计时结束
+	* `shouldStartCountting(true)`，开始倒计，但按钮仍不可点击，直到倒计时结束
 	* `shouldStartCountting(false)`， 按钮恢复可点击状态，但不会开始倒计时
