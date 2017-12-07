@@ -1,5 +1,6 @@
 # RNCountDown
 [![Build Status](https://travis-ci.org/yongqianvip/RNCountDown.svg?branch=master)](https://travis-ci.org/yongqianvip/RNCountDown)
+[![npm version](https://badge.fury.io/js/react-native-smscode-count-down.svg)](https://badge.fury.io/js/react-native-smscode-count-down)
 
 点击按钮发送请求获取验证码，获取成功后按钮上显示倒计时  
 
