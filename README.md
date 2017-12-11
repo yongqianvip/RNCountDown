@@ -1,8 +1,8 @@
 # RNCountDown
 [![](https://img.shields.io/travis/yongqianvip/RNCountDown.svg?style=flat-square)](https://travis-ci.org/yongqianvip/RNCountDown)
 ![](https://img.shields.io/github/release/yongqianvip/RNCountDown.svg?style=flat-square)
-![](https://img.shields.io/npm/dy/react-native-smscode-count-down.svg?style=flat-square)
 ![npm](https://img.shields.io/npm/v/react-native-smscode-count-down.svg?style=flat-square)
+![](https://img.shields.io/npm/dy/react-native-smscode-count-down.svg?style=flat-square)
 
 [![NPM](https://nodei.co/npm/react-native-smscode-count-down.png?downloads=true)](https://nodei.co/npm/react-native-smscode-count-down/)
 
