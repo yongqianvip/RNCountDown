@@ -3,7 +3,7 @@
 ![](https://img.shields.io/github/release/yongqianvip/RNCountDown.svg?style=flat-square)
 ![npm](https://img.shields.io/npm/v/react-native-smscode-count-down.svg?style=flat-square)
 ![](https://img.shields.io/npm/dy/react-native-smscode-count-down.svg?style=flat-square)
-
+![](https://img.shields.io/badge/LICENSE-MIT-blue.svg?style=flat-square)
 [![NPM](https://nodei.co/npm/react-native-smscode-count-down.png?downloads=true)](https://nodei.co/npm/react-native-smscode-count-down/)
 
 点击按钮发送请求获取验证码，获取成功后按钮上显示倒计时  
