@@ -43,11 +43,12 @@ usage：
 | onClick|func|-|点击后触发，同时将按钮置为不可用，配合`shouldStartCountting` 使用|
 | timerCount|number|60|倒计时时长|
 | shouldStartCountting|func|-|决定是否开始倒计时的回调函数，参数类型Bool|
-|style|View style|-|-|
+| style|View style|-|-|
 | textStyle |Text style|-|-|
 | disableColor |string|gray|按钮不可用状态下的颜色|
 | enable |bool|false|按钮是否可用（比如用户输入合法手机号时可用，否则不可用）|
 | timerEnd |func|-|倒计时结束的回调函数|
+| timerTitle |string|获取验证码|-|
 | timerActiveTitle |array|['重新获取（', 's）']|倒计时的数字会插在数组第一项之后，如：['请在', '秒后重新获取']，显示为【请在60秒后重新获取】|
 
 
