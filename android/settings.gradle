@@ -1,0 +1,3 @@
+rootProject.name = 'rn_smscode_count_down'
+
+include ':app'

@@ -6,7 +6,7 @@
 ![](https://img.shields.io/badge/LICENSE-MIT-blue.svg?style=flat-square)
 [![NPM](https://nodei.co/npm/react-native-smscode-count-down.png?downloads=true)](https://nodei.co/npm/react-native-smscode-count-down/)
 
-点击按钮发送请求获取验证码，获取成功后按钮上显示倒计时  
+点击按钮发送请求获取验证码，获取成功后按钮上显示倒计时
 
 ![](http://7xp7q7.com1.z0.glb.clouddn.com/image/jianshu/RN/countdown.gif)
 ## 使用
@@ -17,26 +17,26 @@ install：
 usage：
 
 	import CountDownButton from 'react-native-smscode-count-down'
-	
+
 	...
-	
+
 	<CountDownButton
 		style={{width: 110,marginRight: 10}}
 		textStyle={{color: 'blue'}}
 		timerCount={60}
 		timerTitle={'获取验证码'}
 		enable={phoneNum.length > 10}
-		onClick={(shouldStartCounting)=>{
+		onClick={(shouldStartCountting)=>{
 			//随机模拟发送验证码成功或失败
-			const requestSucc = Math.random() + 0.5 > 1; 
-      		shouldStartCounting(requestSucc)
+			const requestSucc = Math.random() > 0.5;
+      		shouldStartCountting(requestSucc)
 		}}
 		timerEnd={()=>{
 			this.setState({
 				state: '倒计时结束'
 			})
 		}}/>
-		
+
 
 |props|type|default value|mark|
 |:---:|:---:|:---:|:---:|

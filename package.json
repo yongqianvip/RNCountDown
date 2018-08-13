@@ -1,26 +1,44 @@
 {
-  "name": "react-native-smscode-count-down",
-  "version": "0.1.14",
-  "files": [
-    "CountDownButton.js",
-    "index.js",
-    "README.md"
-  ],
-  "description": "点击按钮发送请求获取验证码，获取成功后按钮上显示倒计时",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yongqianvip/RNCountDown.git"
-  },
-  "keywords": [
-    "react-native",
-    "smscode",
-    "count-down"
-  ],
-  "author": "yongqianvip",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yongqianvip/RNCountDown/issues"
-  },
-  "homepage": "https://github.com/yongqianvip/RNCountDown#readme"
+	"name": "react-native-smscode-count-down",
+	"version": "0.1.14",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"react": "16.0.0",
+		"react-native": "0.50.4"
+	},
+	"devDependencies": {
+		"babel-jest": "23.4.2",
+		"babel-preset-react-native": "4.0.0",
+		"jest": "23.5.0",
+		"react-test-renderer": "16.0.0"
+	},
+	"jest": {
+		"preset": "react-native"
+	},
+	"files": [
+		"CountDownButton.js",
+		"index.js",
+		"README.md"
+	],
+	"description": "点击按钮发送请求获取验证码，获取成功后按钮上显示倒计时",
+	"main": "./src/",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yongqianvip/RNCountDown.git"
+	},
+	"keywords": [
+		"react-native",
+		"smscode",
+		"count-down"
+	],
+	"author": "yongqianvip",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/yongqianvip/RNCountDown/issues"
+	},
+	"homepage": "https://github.com/yongqianvip/RNCountDown#readme"
 }
