@@ -4,6 +4,7 @@
 
 # Xcode
 #
+package-lock.json
 build/
 *.pbxuser
 !default.pbxuser
