@@ -36,7 +36,7 @@
 		"count-down"
 	],
 	"author": "yongqianvip",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/yongqianvip/RNCountDown/issues"
 	},
