@@ -22,6 +22,9 @@ usage：
 
 	<CountDownButton
 		style={{width: 110,marginRight: 10}}
+		executeFunc={(shouldStartingCounting)=>{
+			this.shouldStartingCounting = shouldStartingCounting
+		}}
 		textStyle={{color: 'blue'}}
 		timerCount={60}
 		timerTitle={'获取验证码'}
@@ -50,6 +53,7 @@ usage：
 | timerEnd |func|-|倒计时结束的回调函数|
 | timerTitle |string|获取验证码|-|
 | timerActiveTitle |array|['重新获取（', 's）']|倒计时的数字会插在数组第一项之后，如：['请在', '秒后重新获取']，显示为【请在60秒后重新获取】|
+|executeFunc|func|-|倒计时组件加载完成后，立刻回吐开始倒计时的方法`shouldStartCountting`(看下边注释)， 把这个方法绑定到当前对象，可以通过手动调用触发倒计时(具体用法可以参考App.js中的实现)|
 
 
 - `shouldStartCountting`：回调函数，接受一个`Bool`类型的参数

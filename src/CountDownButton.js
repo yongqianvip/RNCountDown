@@ -34,7 +34,8 @@ export default class CountDownButton extends React.Component {
 	  timerTitle: PropTypes.string,
 	  enable: PropTypes.oneOfType([PropTypes.bool,PropTypes.number]),
 	  timerEnd: PropTypes.func,
-	  timerActiveTitle: PropTypes.array
+		timerActiveTitle: PropTypes.array,
+		executeFunc: PropTypes.func
 	};
 
 	_countDownAction(){
@@ -101,6 +102,10 @@ export default class CountDownButton extends React.Component {
 			this.setState({selfEnable:true})
 		}
 	}
+	componentDidMount() {
+		const { executeFunc } = this.props;
+		executeFunc && executeFunc(this._shouldStartCountting);
+	}
 	componentWillUnmount(){
 		clearInterval(this.interval)
 	}
@@ -111,7 +116,7 @@ export default class CountDownButton extends React.Component {
 			<TouchableOpacity activeOpacity={counting ? 1 : 0.8} onPress={()=>{
 				if (!counting && enable && selfEnable) {
 					this.setState({selfEnable:false})
-					this.props.onClick(this._shouldStartCountting)
+					onClick(this._shouldStartCountting)
 				};
 			}}>
 				<View style={[{width:120, height:44,justifyContent:'center',alignItems:'center'},style]}>
@@ -120,9 +125,4 @@ export default class CountDownButton extends React.Component {
 			</TouchableOpacity>
 		)
 	}
-}
-
-CountDownButton.propTypes = {
-	onClick: PropTypes.func,
-
 }
