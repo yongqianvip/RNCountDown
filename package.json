@@ -22,7 +22,7 @@
 		"README.md"
 	],
 	"description": "点击按钮发送请求获取验证码，获取成功后按钮上显示倒计时",
-	"main": "./src/",
+	"main": "./src/index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/yongqianvip/RNCountDown.git"
