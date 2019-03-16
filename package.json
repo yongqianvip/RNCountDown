@@ -5,9 +5,11 @@
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest"
 	},
-	"devDependencies": {
+	"dependencies": {
 		"react": "16.0.0",
-		"react-native": "0.50.4",
+		"react-native": "0.50.4"
+	},
+	"devDependencies": {
 		"babel-jest": "23.4.2",
 		"babel-preset-react-native": "4.0.0",
 		"jest": "23.5.0",
@@ -17,12 +19,11 @@
 		"preset": "react-native"
 	},
 	"files": [
-		"CountDownButton.js",
-		"index.js",
-		"README.md"
+		"README.md",
+		"src/"
 	],
 	"description": "点击按钮发送请求获取验证码，获取成功后按钮上显示倒计时",
-	"main": "./src/index.js",
+	"main": "src/index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/yongqianvip/RNCountDown.git"
