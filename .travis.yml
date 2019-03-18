@@ -1,2 +1,2 @@
 language: objective-c
-xcode_project: ./example/RNCountDown/ios/RNCountDown.xcodeproj
+xcode_project: ./ios/rn_smscode_count_down.xcodeproj
