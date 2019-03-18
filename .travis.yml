@@ -1,2 +1,3 @@
+install: npm install
 language: objective-c
 xcode_project: ./ios/rn_smscode_count_down.xcodeproj
